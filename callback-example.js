@@ -1,9 +1,9 @@
 function exampleCallback(a, b) {
-  return a + b;
+  console.log(a + b);
 }
 
 function one(a, b, callback) {
   return callback(a, b);
 }
 
-exampleCallback(one)
+one(1, 3, exampleCallback)
