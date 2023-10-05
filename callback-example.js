@@ -19,3 +19,15 @@ let testTwo = two(2, 3, function(a, b) {
   return a - b;
 });
 console.log(testTwo);
+
+function anotherFunc(a,b) {
+  return a + b;
+}
+
+// 전혀 다른 함수를 가져와 사용하는 방식 -> 이것은 콜백이라고 부르지 않는다.
+function three(a,b) {
+  return anotherFunc(a, b);
+}
+
+let testThree = three(3, 4);
+console.log(testThree)
